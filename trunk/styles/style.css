@@ -1,0 +1,497 @@
+﻿@CHARSET "UTF-8";
+
+/**
+Règles : 
+- ordre : génériques, régles sur id, règles sur classe
+- ordre dans 1 accolade : par ordre alphabétique (sauf règles spécifiques -moz..)
+*/
+
+
+/** Génériques */
+html {
+	background-color: #F8F8FF;
+	height: 100%
+}
+
+body {
+	background-color: #F8F8FF; /* #EFEFEA;  +vert  ??*/
+	min-height: 100%;
+}
+
+table {
+	width: 100%;
+}
+
+#form_entreprise label {
+	float: left;
+	padding-right: 10px;
+	text-align: right;
+	/*vertical-align: middle;*/
+	width: 20%;
+}
+
+
+/**----  après, c'est mon ancien ficher style, certains styles sont inutiles donc en dessous*/
+/** Fin génériques */
+
+/** Eléments id */
+#wrapper { /* wrapper pour tout le contenu, header, etc.. */
+	background-color: white;
+	border: 1px solid lightgrey;
+	font-size: 96%; /* 12px d'après la fonte officielle yahoo */
+	/*font-family: "Trebuchet MS", Verdana, "DejaVu Sans", "Bitstream Vera Sans", Geneva, sans-serif;*/
+	margin: 0 auto;
+	padding: 10px;
+	width: 978px;
+}
+
+#header { /* entête */
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	background-image: url("../images/degrade2.png");
+	color: white;
+	font-size: 2em;
+	height: 40px;
+	margin: auto;
+	padding: 10px;
+	vertical-align: middle; 
+}
+
+#footer { /* pied de page */
+	background-color: #FFFAFA;
+	border-top: 1px solid lightgrey;
+	margin: 0 -10px -10px -10px; /* pour contrecarrer le padding de wrapper */
+	min-height: 50px;
+	padding: 25px 0 0;
+	text-align: center;
+}
+
+#barre_entete_icones {
+	float: right;
+	/*margin: 3px 10px 0px 0px;*/
+	margin-top: 18px;
+	vertical-align: baseline;
+}
+
+	#barre_entete_icones ul {
+		display: inline;
+		margin: 0;
+	}
+
+	#barre_entete_icones li {
+		display: inline;
+		padding: 0px 0px 0px 5px;
+	}
+
+
+#tabWs { /* table des web services */
+	border-collapse: collapse;
+	margin: 10px 0 25px 0;
+	width: 100%;
+}
+	
+
+	#tabWs td {
+		border: 1px solid lightgrey;
+		padding: 2px 0 2px 5px;
+		vertical-align: middle;
+	}
+	
+	#tabWs .alt td {
+		background-color: #EAF2D3;
+	}
+	
+	#tabWs .blanc {
+		border: none;
+		height: 20px;
+	}
+	
+	#tabWs .domaine {
+		-moz-border-radius: 15px 0;
+		-webkit-border-radius: 15px 0 15px 0;
+		background-color: #9C6;
+		border: none;
+		color: white;
+		font-weight: bold;
+		padding: 5px;
+		text-align: center;
+		vertical-align: middle;
+		white-space: nowrap; /* la cellule ne sera jamais sur 2 lignes */
+	}
+	
+	#tabWs .domaine img{
+		vertical-align: middle;
+	}
+	
+
+#legende { /* légende au tableau */
+	border: 1px solid lightgrey;
+	margin: 0 auto 50px auto;
+	padding: 0 10px 10px 10px;
+	width: 70%;
+}
+
+
+#matrice {
+	font-size: 0.8em;
+	margin: 15px 0;
+	width: 100%;
+}
+
+	#matrice .alt {
+		background-color: #FEFAAA; /* jaune pastel */
+	}
+
+	#matrice .entete th {
+		background-color: #EAF2D3; /* vert pastel */ 
+	}
+
+	#matrice td, #matrice th {
+		text-align: center;
+		border-color: lightgrey;
+	}
+	
+	#matrice .alt td, #matrice .alt th  {
+		background-color: #F2F2F2; /* bleu gris pastel*/
+	}
+	
+	/*#matrice tr:hover {
+		background-color: lightgreen;
+		color: white;
+	}*/
+	
+	
+
+#legende p {
+	margin: 10px 0 0 0;
+}
+
+#legende .titre {
+	font-weight: bold;
+	float: right
+}
+
+/** Fin id */
+
+/** Classes */ 
+/** liens principaux de la page */
+.ul-nav {
+	margin: 0;
+}
+
+	.ul-nav li {
+		display: inline;
+	}
+	
+		.ul-nav a {
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border: 3px solid lightgrey;
+			color: gray;
+			float: left; /* rend toute la zone cliquable */
+			font-size: 1.5em;
+			margin: 20px 10px;
+			padding: 5px 15px;
+			text-align: center;
+			text-decoration: none;
+			/*width: inherit; /* prend toute la largeur du contenu */
+		}
+		
+		.ul-nav .focus a {
+			border: 3px solid #9C6;
+			color: #6B8F47;
+		}
+		
+		.ul-nav a:hover {
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			background-color: #9C6;
+			border: 3px solid lightgrey;
+			color: white;
+		}
+
+.tag1, .tag2 { /* mise en évidence de libellés */
+	border: 1px solid lightgrey;
+	padding: 0px 3px;
+}
+
+.tag1 {
+	-moz-border-radius: 40px;
+	background-color: orange;
+	color: white;
+}
+
+.tag2 {
+	-moz-border-radius: 40px;
+	background-color: #98FB98;
+	color: green;
+}
+
+.deprecated {
+	text-decoration: line-through;
+}
+
+.nomWs  {
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.debug { /* aide pour debug graphique */
+	background-color: lightgrey;
+	border: 1px solid red;
+	color: white;
+	visibility: visible;
+}
+
+/** partie fonctionnel */
+
+.eltFonctionnel {
+	float: left;
+	margin: 0 15px 10px;
+	padding: 10px 10px 20px;
+	/*border: 1px solid black;*/
+	text-align: center;
+}
+	.eltFonctionnel h1{
+		margin: 0 0 15px;
+	}
+	
+	.eltFonctionnel table {
+		/*float: left;*/
+		background-color: white;
+		margin: 0 auto;
+	}
+	
+	.eltFonctionnel ul {
+		text-align: left;
+	}
+
+.ul-tab {
+	margin: 0; 
+	padding: 0;
+}
+	.ul-tab li {
+		display: inline;
+		
+	}
+	
+	.ul-tab a, .ul-tab a.focus {
+		-moz-border-radius: 10px 10px 0 0;
+		-webkit-border-radius: 10px 0px 0 0;		
+		background-color: #FEFAAA;
+		border-left: 1px solid lightgrey;
+		border-right: 1px solid lightgrey;
+		border-top: 1px solid lightgrey;
+		float: left;
+		/*display: block;*/
+		padding: 5px 10px 15px;
+		margin: 0 5px 0 0;
+		/*width: inherit;*/
+		text-decoration: none;
+		position:relative;
+		top: 10px;
+		
+	}
+	
+	.ul-tab a.focus {
+		border-bottom: 1px solid #FBFFEF;
+		font-weight: bold;
+		background-color: #FBFFEF;
+		padding: 9px 10px 10px;
+		position:relative;
+		top: 1px; /* permet de décaler d'1 px en bas, pour passer devant contenuOnglet, et faire l'effet de connexion */
+		vertical-align: middle;
+		z-index: +11;
+	}
+	
+	.ul-tab a:visited {
+		color: black;
+	}
+	
+	.ul-tab a:hover {
+		background-color: white;
+	}
+	
+	.ul-tab a.focus:hover {
+		background-color: #FEFAAA;
+	}
+	
+.filtre {
+	margin: 10px 0;
+}
+	
+#contenuOnglet {
+	-moz-border-radius: 0 10px 0 0;
+	-webkit-border-radius: 0 10px 0 0;		
+	background-color: #FBFFEF;
+	border: 1px solid lightgrey;
+	float: left;
+	margin: 0 0 10px;
+	position:relative;
+	padding: 20px 0 5px;
+	width: 100%;	
+	z-index: +10;
+}
+
+#contenuOnglet label {
+	float: left;
+	padding-right: 10px;
+	text-align: right;
+	width: 20%;
+}
+
+/** Ajout style DGFIP **/
+	/****** fil d'ariane ******/
+
+	#fil_ariane {
+		-moz-border-radius: 0 0 10px 10px;	
+		-webkit-border-radius: 0 0 10px 10px;
+		border: 1px solid #9F9F9F;
+		padding: 10px;
+		margin-bottom: -1px; 
+	}
+
+	#fil_ariane #intro {
+		display: none;
+	}	
+	
+	#fil_ariane ol {
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
+
+	#fil_ariane li {
+		background: url("../images/suivant.gif") no-repeat 0% 50%;
+		display: inline;
+		padding: 0 0 0 5px;
+	}
+	
+	#fil_ariane li strong{
+		font-size:1em;
+	}
+
+	#fil_ariane li.fil_ariane_processus {
+		background: none;
+		font-size:1em;
+		padding: 0;
+	}
+
+	#fil_ariane li.fil_ariane_courant {
+		font-size:1em;
+		padding: 0 0 0 10px;		
+	}
+
+	#fil_ariane li.fil_ariane_precedent {
+	}
+
+	#fil_ariane li.fil_ariane_suivant {
+		background: url("../img/suivant_apres.gif") no-repeat 0% 50%;
+		background-color: inherit;
+		color: #2F2F2F;
+		font-style: oblique;
+		padding: 0 0 0 10px;
+	}
+
+	#fil_ariane a {
+		border: none;
+	}
+
+	#fil_ariane a:link,
+	#fil_ariane a:visited {
+		background-color: inherit;
+		color: #000000;
+	}
+
+	#fil_ariane a:hover,
+	#fil_ariane a:focus {
+		background-color: #FFFFFF;
+		color: inherit;
+	}
+
+/* breadcrumb */
+		.breadcrumb { 
+			list-style: none; 
+			overflow: hidden;
+			font: 14px Arial, Sans-Serif;
+			
+			-moz-border-radius: 0 0 10px 0px;	
+			-webkit-border-radius: 0 0 10px 0px;
+			border: 1px solid #9F9F9F;/*red*/
+			margin: 0;
+		}
+		.breadcrumb li { 
+			float: left;
+		}
+		.breadcrumb li a {
+			list-style: none;
+			background: #346294;                   /* fallback color */
+			background: hsla(203,85%,35%,1); 
+			color: white;
+			display: block;
+			/*float: left;*/
+			padding: 10px 0 10px 45px;
+			position: relative; 
+			text-decoration: none; 
+		}
+		
+		.breadcrumb li a:after { 
+			content: " "; 
+			display: block; 
+			width: 0; 
+			height: 0;
+			border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+			border-bottom: 50px solid transparent;
+			border-left: 30px solid hsla(203,85%,35%,1);
+			position: absolute;
+			top: 50%;
+			margin-top: -50px; 
+			left: 100%;
+			z-index: 2; 
+		}	
+		
+		.breadcrumb li a:before { 
+			content: " "; 
+			display: block; 
+			width: 0; 
+			height: 0;
+			border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+			border-bottom: 50px solid transparent;
+			border-left: 30px solid white;
+			position: absolute;
+			top: 50%;
+			margin-top: -50px; 
+			margin-left: 1px;
+			left: 100%;
+			z-index: 1; 
+		}
+			
+		.breadcrumb li:first-child a {
+			padding-left: 10px;
+		}
+		/*
+		.breadcrumb li:nth-child(2) a       { background:        hsla(203,85%,45%,1); }
+		.breadcrumb li:nth-child(2) a:after { border-left-color: hsla(203,85%,45%,1); }
+		.breadcrumb li:nth-child(3) a       { background:        hsla(203,85%,55%,1); }
+		.breadcrumb li:nth-child(3) a:after { border-left-color: hsla(203,85%,55%,1); }
+		.breadcrumb li:nth-child(4) a       { background:        hsla(203,85%,65%,1); }
+		.breadcrumb li:nth-child(4) a:after { border-left-color: hsla(203,85%,65%,1); }
+		.breadcrumb li:nth-child(5) a       { background:        hsla(203,85%,75%,1); }
+		.breadcrumb li:nth-child(5) a:after { border-left-color: hsla(203,85%,75%,1); }
+		.breadcrumb li:last-child a {
+			background: white !important;
+			color: black;
+			pointer-events: none;
+ 			cursor: default;
+		}
+		.breadcrumb li:last-child a:after { border: 0; }
+		.breadcrumb li a:hover { background: hsla(203,85%,25%,1); }
+		.breadcrumb li a:hover:after { border-left-color: hsla(203,85%,25%,1) !important; }
+
+/** Fin classes */
