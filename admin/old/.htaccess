@@ -1,0 +1,5 @@
+AuthName "Protected Area"
+AuthType Basic
+require valid-user
+
+
