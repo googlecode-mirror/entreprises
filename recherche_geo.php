@@ -2,7 +2,7 @@
 
 <?
 include_once('service/services.php');
-
+//test
 $zones = rendZonesGeo();
 
 if (@$_GET['id_geo'] != "") {
